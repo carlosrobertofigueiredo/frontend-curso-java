@@ -2,13 +2,23 @@
 <html lang="pt-br">
 
 <head>
+    <!--
+        Caminho base.
+        Define o caminho absoluto dos documentos e links do site.
+        Este camiho será alterado conforme a plataforma de hospedagem.
+    -->
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site para apresentação dos conceitos de front-end.">
+    <meta name="description" content="Site para apresentação dos conceitos de front-end do curso de Java.">
     <meta name="author" descrition="André Luferat &lt;andre@luferat.net&gt;">
     <meta name="keywords" description="JavaScript, HTML5, CSS3, semântica, mobile-first, responsividade, api, rest">
-    <link rel="stylesheet" href="/index.css">
-    <link rel="shortcut icon" href="/img/favicon.alfa.png">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Carrega o CSS específico de cada página -->
+    <link rel="stylesheet" href="" id="pageCSS">
+    
+    <link rel="shortcut icon" href="img/favicon.alfa.png">
     <title>FrontEndeiros</title>
 </head>
 
@@ -20,19 +30,16 @@
         <!-- Âncora para o topo da página → #top -->
         <a id="top"></a>
 
-        <!-- Cabeçalho -->
+        <!-- Cabeçalho usando Font Awesome como ícone -->
         <header>
-            <!-- Usando uma imagem como logotipo. -->
-            <!-- <a href="/"><img src="/img/logo.alfa.png" alt="Logotipo de FrontEnd."></a> -->
-            <!-- Usando Font Awesome como logotipo. -->
-            <a href="/"><i class="fa-solid fa-laptop-code fa-fw"></i></a>
+            <a href="home"><i class="fa-solid fa-laptop-code fa-fw"></i></a>
             <h1>FrontEndeiros<small>Programando para o futuro</small></h1>
         </header>
 
         <!-- Menu -->
         <nav>
             <!-- Item de menu -->
-            <a href="/">
+            <a href="home">
 
                 <!-- Ícone do item do menu -->
                 <i class="fa-solid fa-house fa-fw"></i>
@@ -42,34 +49,30 @@
             </a>
 
             <!-- Os outros itens seguem o mesmo padrão acima -->
-            <a href="/contacts">
+            <a href="contacts">
                 <i class="fa-solid fa-headset fa-fw"></i>
                 <span>Contatos</span>
             </a>
-            <a href="/about">
+            <a href="about">
                 <i class="fa-solid fa-circle-info fa-fw"></i>
                 <span>Sobre</span>
             </a>
 
-            <a href="/profile">
+            <a href="user">
                 <i class="fa-solid fa-user fa-fw"></i>
                 <span>Login</span>
             </a>
         </nav>
 
         <!-- Conteúdo principal -->
-        <main>
-
-           
-
-        </main>
+        <main></main>
 
         <!-- Rodapé -->
         <footer>
 
             <!-- Primeira linha do rodapé -->
             <div class="footer-top">
-                <a href="/">
+                <a href="home">
                     <i class="fa-solid fa-house fa-fw"></i>
                 </a>
                 <div>&copy; 2023 Joca da Silva</div>
@@ -85,7 +88,7 @@
                     <h4>Redes Sociais:</h4>
                     <ul>
                         <li>
-                            <a href="https://facebook.com/FrontEnd" target="_blank">
+                            <a href="HTTPS://facebook.com/FrontEnd" target="_blank">
                                 <i class="fa-brands fa-square-facebook fa-fw"></i>
                                 <span>FaceBook</span>
                             </a>
@@ -109,19 +112,19 @@
                     <h4>Links rápidos:</h4>
                     <ul>
                         <li>
-                            <a href="/about">
+                            <a href="about">
                                 <i class="fa-solid fa-file-code fa-fw"></i>
                                 <span>Sobre o site</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/about">
+                            <a href="about">
                                 <i class="fa-solid fa-laptop-code fa-fw"></i>
                                 <span>Quem somos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="/about">
+                            <a href="about">
                                 <i class="fa-solid fa-user-lock fa-fw"></i>
                                 <span>Privacidade</span>
                             </a>
@@ -140,7 +143,7 @@
 
     <!-- Carga do JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="/index.js"></script>
+    <script src="index.js"></script>
 
 </body>
 
