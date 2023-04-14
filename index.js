@@ -27,7 +27,8 @@
  **/
  var app = {
     siteName: 'FrontEndeiros',
-    siteSlogan: 'Programando para o futuro'
+    siteSlogan: 'Programando para o futuro',
+    apiContactsURL: 'http://localhost:3000/contacts'
 }
 
 /**
@@ -213,7 +214,7 @@ function loadpage(page, updateURL = true) {
             if (data.trim().substring(0, 9) != '<article>')
 
                 // Carrega a página de erro 404 sem atualizar a rota.
-                loadpage('e404')
+                loadpage('e404', false)
 
             // Se o documento é uma página de conteúdo...
             else {
