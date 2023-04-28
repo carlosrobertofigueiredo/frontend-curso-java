@@ -60,6 +60,32 @@
   **/
  function myApp() {
  
+     // console.log(sessionStorage.userData)
+ 
+     // Variável com dados do usuário logado.
+     var user;
+ 
+     // Se tem usuário logado.
+     if (sessionStorage.userData) {
+ 
+         // Dados do usuário logado
+         user = JSON.parse(sessionStorage.userData)
+         $('#navUser').html(`
+             <img src="${user.photo}" alt="${user.name}" referrerpolicy="no-referrer">
+             <span>Perfil</span>
+         `)
+         $('#navUser').attr('href', 'profile')
+     } else {
+         $('#navUser').html(`
+             <i class="fa-solid fa-user fa-fw"></i>
+             <span>Login</span>
+         `)
+         $('#navUser').attr({ 
+             'href': 'home',
+             // 'onclick': 'login()'
+          })
+     }
+ 
      /**
       * IMPORTANTE!
       * Para que o roteamento funcione corretamente no "live server", é 
@@ -87,6 +113,8 @@
       * routerLink().
       **/
      $(document).on('click', 'a', routerLink)
+ 
+     $('')
  
  }
  
@@ -309,8 +337,8 @@
      var age = tYear - pYear
  
      // Verificar o mês e o dia.
-     if(pMonth > tMonth) age --
-     else if(pMonth == tMonth && pDay > tDay) age --
+     if (pMonth > tMonth) age--
+     else if (pMonth == tMonth && pDay > tDay) age--
  
      // Retorna a idade.
      return age
