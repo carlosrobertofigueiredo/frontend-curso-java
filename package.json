@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/carlosrobertofigueiredo/frontend-curso-java/issues"
   },
-  "homepage": "https://github.com/carlosrobertofigueiredo/frontend-curso-java#readme"
+  "homepage": "https://github.com/carlosrobertofigueiredo/frontend-curso-java#readme",
+  "devDependencies": {}
 }
