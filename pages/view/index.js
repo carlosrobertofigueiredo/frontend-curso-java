@@ -224,7 +224,7 @@ function updateViews(artData) {  // Realiza uma requisição PATCH para a API, a
         type: 'PATCH',  //o método patch atualiza o campo views do artigo, que corresponde o número de visualizações
         url: app.apiBaseURL + 'articles/' + artData.id, // A URL da requisição é construída concatenando a URL base da API (app.apiBaseURL) com o endpoint específico para atualização de um artigo (/articles/) e o ID do artigo que deve ser atualizado.
         data: { views: parseInt(artData.views) + 1 }  // a chave 'views' e o valor da visualização atualizada. O parseInt é utilizado para converter o valor de artData.views para um número inteiro e em seguida, o operador +1 é utilizado para adicionar mais uma visualização.
-    });                                               //empre que a função updateViews é chamada, a API é atualizada com o número de visualizações incrementado.
+    });                                               //Sempre que a função updateViews é chamada, a API é atualizada com o número de visualizações incrementado.
 
 
 
