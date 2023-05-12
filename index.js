@@ -28,7 +28,7 @@
  const app = {
     siteName: 'FrontEndeiros',
     siteSlogan: 'Programando para o futuro',
-    apiBaseURL: 'http://localhost:3000/'
+    apiBaseURL: 'https://apifrontendeiros-asp8.onrender.com/'
 }
 
 /**
