@@ -133,8 +133,8 @@ function myApp() {
 
 // Faz login do usuário usando o Firebase Authentication
 function fbLogin() {
-    //firebase.auth().signInWithPopup(provider)
-    firebase.auth().signInWithRedirect(provider)
+    firebase.auth().signInWithPopup(provider)
+    // firebase.auth().signInWithRedirect(provider)
         .then((user) => {
             popUp({ type: 'success', text: `Olá ${user.user.displayName}!` })
             loadpage(location.pathname.split('/')[2])
