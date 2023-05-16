@@ -139,6 +139,7 @@ function fbLogin() {
             popUp({ type: 'success', text: `Olá ${user.user.displayName}!` })
             loadpage(location.pathname.split('/')[2])
         })
+ /*
         .catch((error) => {
             try {
                 popUp({ type: 'error', text: 'Ooops! Popups estão bloqueados!<br>Por favor, libere-os!' })
@@ -146,6 +147,7 @@ function fbLogin() {
                 alert('Ooops! Popups estão bloqueados!\nPor favor, libere-os!')
             }
         })
+        */
 }
 
 /**
